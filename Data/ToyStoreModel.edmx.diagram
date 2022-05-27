@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cd67a0987885432588e8751cf4be4110" Name="Diagram1">
+        <EntityTypeShape EntityType="ToyStoreDBModel.Client" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ToyStoreDBModel.HistoryOfEnter" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ToyStoreDBModel.Order" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ToyStoreDBModel.PersonalOffer" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ToyStoreDBModel.Product" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ToyStoreDBModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ToyStoreDBModel.TypeOfUser" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ToyStoreDBModel.User" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="ToyStoreDBModel.FK_Order_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="ToyStoreDBModel.FK_PersonalOffer_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="ToyStoreDBModel.FK_HistoryOfEnter_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="ToyStoreDBModel.FK_Order_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="ToyStoreDBModel.FK_User_TypeOfUser1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ToyStoreDBModel.OrderRequest" Width="1.5" PointX="5.375" PointY="7.75" />
+        <EntityTypeShape EntityType="ToyStoreDBModel.Worker" Width="1.5" PointX="7.375" PointY="0.875" />
+        <AssociationConnector Association="ToyStoreDBModel.FK_User_Client" />
+        <AssociationConnector Association="ToyStoreDBModel.FK_User_Worker" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -73,9 +73,9 @@ namespace ToysStoreApp.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Client {
+        internal static System.Drawing.Bitmap Manager {
             get {
-                object obj = ResourceManager.GetObject("Client", resourceCulture);
+                object obj = ResourceManager.GetObject("Manager", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace ToysStoreApp.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Manager {
+        internal static System.Drawing.Bitmap StoreLogo {
             get {
-                object obj = ResourceManager.GetObject("Manager", resourceCulture);
+                object obj = ResourceManager.GetObject("StoreLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

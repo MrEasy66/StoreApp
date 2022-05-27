@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -65,78 +68,116 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddEditClientPage.xaml.cs">
-      <DependentUpon>AddEditClientPage.xaml</DependentUpon>
+    <Compile Include="Data\Client.cs">
+      <DependentUpon>ToyStoreModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="AddEditOfferPage.xaml.cs">
-      <DependentUpon>AddEditOfferPage.xaml</DependentUpon>
+    <Compile Include="Data\HistoryOfEnter.cs">
+      <DependentUpon>ToyStoreModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="AddEditOrderPage.xaml.cs">
-      <DependentUpon>AddEditOrderPage.xaml</DependentUpon>
+    <Compile Include="Data\Order.cs">
+      <DependentUpon>ToyStoreModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Client.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
+    <Compile Include="Data\OrderRequest.cs">
+      <DependentUpon>ToyStoreModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBModel.cs">
+    <Compile Include="Data\PersonalOffer.cs">
+      <DependentUpon>ToyStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Product.cs">
+      <DependentUpon>ToyStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sysdiagrams.cs">
+      <DependentUpon>ToyStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ToyStoreModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBModel.tt</DependentUpon>
+      <DependentUpon>ToyStoreModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="HistoryOfEnter.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
+    <Compile Include="Data\ToyStoreModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToyStoreModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="HistoryPage.xaml.cs">
+    <Compile Include="Data\ToyStoreModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToyStoreModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TypeOfUser.cs">
+      <DependentUpon>ToyStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\User.cs">
+      <DependentUpon>ToyStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Worker.cs">
+      <DependentUpon>ToyStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEditClientPage.xaml.cs">
+      <DependentUpon>AddEditClientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEditOfferPage.xaml.cs">
+      <DependentUpon>AddEditOfferPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEditOrderPage.xaml.cs">
+      <DependentUpon>AddEditOrderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEditProductPage.xaml.cs">
+      <DependentUpon>AddEditProductPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEditUserPage.xaml.cs">
+      <DependentUpon>AddEditUserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HistoryPage.xaml.cs">
       <DependentUpon>HistoryPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager.cs" />
-    <Compile Include="OffersPage.xaml.cs">
+    <Compile Include="Pages\OffersPage.xaml.cs">
       <DependentUpon>OffersPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Order.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
+    <Compile Include="Pages\OrderRequestWindow.xaml.cs">
+      <DependentUpon>OrderRequestWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="OrdersPage.xaml.cs">
+    <Compile Include="Pages\OrdersPage.xaml.cs">
       <DependentUpon>OrdersPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PersonalOffer.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
+    <Compile Include="Pages\ProductPage.xaml.cs">
+      <DependentUpon>ProductPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UsersPage.xaml.cs">
+      <DependentUpon>UsersPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TypeOfUser.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UserPage.xaml.cs">
+    <Compile Include="Pages\UserPage.xaml.cs">
       <DependentUpon>UserPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ClientsPage.xaml.cs">
+    <Compile Include="Pages\ClientsPage.xaml.cs">
       <DependentUpon>ClientsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserWindow.xaml.cs">
+    <Compile Include="Pages\UserWindow.xaml.cs">
       <DependentUpon>UserWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="AddEditClientPage.xaml">
+    <Page Include="Pages\AddEditClientPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddEditOfferPage.xaml">
+    <Page Include="Pages\AddEditOfferPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddEditOrderPage.xaml">
+    <Page Include="Pages\AddEditOrderPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AuthorizationWindow.xaml">
+    <Page Include="Pages\AddEditUserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AuthorizationWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -144,41 +185,47 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DBModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="AuthorizationWindow.xaml.cs">
+    <Compile Include="Pages\AuthorizationWindow.xaml.cs">
       <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="HistoryPage.xaml">
+    <Page Include="Pages\AddEditProductPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="OffersPage.xaml">
+    <Page Include="Pages\HistoryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="OrdersPage.xaml">
+    <Page Include="Pages\OffersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserPage.xaml">
+    <Page Include="Pages\OrderRequestWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ClientsPage.xaml">
+    <Page Include="Pages\OrdersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserWindow.xaml">
+    <Page Include="Pages\ProductPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\UserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ClientsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\UsersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\UserWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -197,12 +244,12 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DBModel.edmx">
+    <EntityDeploy Include="Data\ToyStoreModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>ToyStoreModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DBModel.edmx.diagram">
-      <DependentUpon>DBModel.edmx</DependentUpon>
+    <None Include="Data\ToyStoreModel.edmx.diagram">
+      <DependentUpon>ToyStoreModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -214,22 +261,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DBModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DBModel.Context.cs</LastGenOutput>
-      <DependentUpon>DBModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="DBModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBModel.edmx</DependentUpon>
-      <LastGenOutput>DBModel.cs</LastGenOutput>
-    </Content>
-    <Resource Include="Resources\Client.jpg" />
-    <Resource Include="Resources\Manager.jpg" />
-    <Resource Include="Resources\Administrator.jpg" />
+    <Resource Include="Resources\StoreLogo.png" />
+    <Resource Include="Resources\Manager.png" />
+    <Resource Include="Resources\Administrator.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\ToyStoreModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ToyStoreModel.edmx</DependentUpon>
+      <LastGenOutput>ToyStoreModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\ToyStoreModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ToyStoreModel.edmx</DependentUpon>
+      <LastGenOutput>ToyStoreModel.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Resources\Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

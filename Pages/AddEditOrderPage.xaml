@@ -1,0 +1,34 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ToysStoreApp"
+      xmlns:SqlServer="clr-namespace:System.Data.Entity.SqlServer;assembly=EntityFramework.SqlServer" x:Class="ToysStoreApp.AddEditOrderPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="600"
+      Title="AddEditOrderPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="ID Клиента"/>
+        <ComboBox Grid.Column="1" x:Name="comboBoxClientId" SelectedItem="{Binding Client}" DisplayMemberPath="ID"/>
+        <TextBlock Text="ID Товара" Grid.Row="1"/>
+        <ComboBox Grid.Row="1" Grid.Column="1" x:Name="comboBoxProductId" SelectedItem="{Binding Product}" DisplayMemberPath="ID"/>
+        <TextBlock Grid.Row="2" Text="Количество товара"/>
+        <TextBox Text="{Binding ProductCount}" x:Name="txtBoxProductCount" Grid.Column="1" Grid.Row="2" PreviewTextInput="txtBoxProductCount_PreviewTextInput"/>
+        <TextBlock Grid.Row="3" Text="Стоимость заказа"/>
+        <TextBox Text="{Binding OrderPrice}" x:Name="txtBoxOrderPrice" Grid.Column="1" Grid.Row="3" PreviewTextInput="txtBoxOrderPrice_PreviewTextInput"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="Сохранить" x:Name="btnSave" Click="btnSave_Click"/>
+    </Grid>
+</Page>

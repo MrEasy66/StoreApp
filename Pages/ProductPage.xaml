@@ -1,0 +1,45 @@
+﻿<Page x:Class="ToysStoreApp.Pages.ProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ToysStoreApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProductPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Поиск: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18"/>
+                <TextBox x:Name="searchBox" Margin="49 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Top" TextChanged="searchBox_TextChanged"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
+                <TextBlock Text="Сортировка: " VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="18"/>
+                <ComboBox x:Name="filterBox" Margin="2 0 0 0" Width="250" SelectionChanged="filterBox_SelectionChanged"/>
+            </StackPanel>
+        </StackPanel>
+        <DataGrid Grid.Row="1" x:Name="productsGrid" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="*"/>
+                <DataGridTextColumn Header="Название товара" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="Производитель" Binding="{Binding Manufacturer}" Width="*"/>
+                <DataGridTextColumn Header="Цена товара" Binding="{Binding Cost}" Width="*"/>
+                <DataGridTemplateColumn Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Редактировать" Name="btnEdit" Click="btnEdit_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Row="2" Content="Добавить" HorizontalAlignment="Left" x:Name="btnAdd" Click="btnAdd_Click"/>
+        <Button Grid.Row="2" Content="Удалить" HorizontalAlignment="Right" x:Name="btnDelete" Click="btnDelete_Click"/>
+    </Grid>
+</Page>
